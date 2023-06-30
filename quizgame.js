@@ -96,7 +96,7 @@ getNewQuestion=()=>{
 
     if (availableQuestions.length===0||questionCounter>=NUMBEROFQUESTIONS){
         localStorage.setItem("mostRecentScore",score);
-        return window.location.assign("./end.html");
+        return window.location.assign("./results.html");
     };
     questionCounter++;
     progressMetric.innerText="Question: "+questionCounter+"/"+NUMBEROFQUESTIONS;
@@ -119,7 +119,9 @@ getNewQuestion=()=>{
 
 };
 
-/* this is an event listener which reacts if you select a wrong or correct answer */
+/* this is an event listener which reacts if you select a wrong or correct answer 
+we use a timeout to give a pause between every question
+*/
 choices.forEach(choice=>{
     choice.addEventListener("click",e=>{
         

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Results!!</title>
+    <link rel="stylesheet" href="./maincss.css">
+</head>
+<body>
+    <div class="container">
+        <div id="result-div" class="center column">
+            <h1 id="trainerResult">0</h1>
+            <form>
+                <input
+                type="text"
+                name="username"
+                id="trainerID"
+                placeholder="Trainer ID"
+                />
+                <button 
+                    type="submit" 
+                    class="button"
+                    id="saveScoreButton" 
+                    onclick="saveHighScore(event)"
+                    disabled
+                >Save
+                </button>
+            </form>
+            <a class="button" href="./quizgame.html">Play Again</a>
+            <a class="button" href="./index.html">Go Home</a>
+        </div>
+    </div>
+    <script src="./results.js"></script>
+</body>
+</html>

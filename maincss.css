@@ -29,6 +29,11 @@ h1{
     justify-content: center;
 }
 
+
+#trainerResult{
+    font-size: 2.3rem;
+}
+
 h1>span{
     font-size: 2rem;
 }
@@ -44,7 +49,7 @@ h1>span{
 }
 
 .container > * {
-/*in case i need it later*/
+/*in case i need it later, creating problems for now*/
 }
 
 .justifyThis {
@@ -101,9 +106,31 @@ h1>span{
 }
 
 
-.btn[disabled]:hover{
+.button[disabled]:hover{
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 05);
+
+}
+
+input::placeholder{
+    color: #aaa;
 }
 

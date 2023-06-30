@@ -1,0 +1,35 @@
+
+.highscore-container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+#goHomeButton{
+    display: flex;
+    justify-content: center;
+    margin-left: 3rem;
+}
+
+#highScoresList{
+    list-style:none;
+    padding-left: 0;
+    margin-bottom: 3rem;
+    text-align: center;
+
+}
+
+.high-score{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.high-score:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+    box-shadow: 0 0 10px 0 #ac2941 inset, 0 0 10px 2px #ac2941;
+    border: 2px solid #ac2941;
+
+}
