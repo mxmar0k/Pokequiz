@@ -47,12 +47,13 @@ h1>span{
 /*in case i need it later*/
 }
 
-.justify-center{
+.justifyThis {
     display: flex;
     flex-direction: column;
     justify-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
     
 }
 

@@ -10,19 +10,19 @@
 </head>
 <body>
     <div class="container">
-        <div id="game" class="justify-center column">
+        <div id="game" class="justifyThis column">
             <div id="info-display">
                 <div id="display-item">
-                    <p id="progressText" class="info">
+                    <p id="progressMetric" class="info">
                         Question Bar
                     </p>
-                    <div id="progressBar">
-                        <div id="progressBarFull"></div>
+                    <div id="bar">
+                        <div id="filledBar"></div>
                     </div>
                 </div>
                 <div id="display-item">
                     <p class="info">
-                        Score/
+                        Score
                     </p>
                     <h1 class="display-main-text" id="score">
                         0
@@ -38,24 +38,24 @@
                 </div>
             </div>
             <h2 id="question">Answer the question, please</h2>
-            <div class="choice-container">
-                <p class="choice-prefix">A</p>
-                <p class="choice-text" data-number="1">Choice 1</p>
+            <div class="Answer-container">
+                <p class="fixed-choice">A</p>
+                <p class="fixed-text" data-number="1">Choice 1</p>
             </div>
-            <div class="choice-container">
-                <p class="choice-prefix">B</p>
-                <p class="choice-text" data-number="2">Choice 2</p>
+            <div class="Answer-container">
+                <p class="fixed-choice">B</p>
+                <p class="fixed-text" data-number="2">Choice 2</p>
             </div>
-            <div class="choice-container">
-                <p class="choice-prefix">C</p>
-                <p class="choice-text" data-number="3">Choice 3</p>
+            <div class="Answer-container">
+                <p class="fixed-choice">C</p>
+                <p class="fixed-text" data-number="3">Choice 3</p>
             </div>
-            <div class="choice-container">
-                <p class="choice-prefix">D</p>
-                <p class="choice-text" data-number="4">Choice 4</p>
+            <div class="Answer-container">
+                <p class="fixed-choice">D</p>
+                <p class="fixed-text" data-number="4">Choice 4</p>
             </div>
         </div>
     </div>
-    <script src="./game.js"></script>
+    <script src="./quizgame.js"></script>
 </body>
 </html>
