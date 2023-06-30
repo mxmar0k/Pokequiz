@@ -25,6 +25,8 @@ h1{
     font-size: 4rem;
     color: #204152;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 h1>span{
@@ -35,24 +37,40 @@ h1>span{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 70rem;
+    max-width: 100%;
     margin: 0 auto;
+    justify-content: center;
+
 }
 
 .container > * {
-width:100%
+/*in case i need it later*/
+}
+
+.justify-center{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.text-center {
+    text-align: center;
+
 }
 
 .column{
     display:flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .center{
+    display:flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .hidden{
@@ -71,7 +89,6 @@ width:100%
     color: #ac2941;
     background-color: white;
 }
-
 
 
 .button:hover {

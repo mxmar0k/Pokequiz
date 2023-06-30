@@ -1,0 +1,88 @@
+.choice-container{
+    display: flex;
+    margin-bottom: .7rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: .1rem solid #ac2941;
+    border-radius: 1.5rem;
+    background-color: #ffffff;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    background-color: #94d5f6;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix{
+    padding: 1.5rem 2.5rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    background-color: rgb(68, 155, 221);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.choice-text{
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.correct{
+    background-color: 006a62;
+}
+
+.incorrect{
+    background-color: ac1000;
+}
+
+
+/*Info display
+It contains the time left
+the current score
+and a graphich meter in the form of a rectangle
+
+*/
+
+
+#display-item >*{
+    font-size: 2.2rem;
+    height: 5vh;
+}
+
+#info-display{
+    background-color: #de4a6a;
+    border-radius: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.info{
+    text-align: center;
+    font-size:1.5rem
+}
+
+.display-main-text{
+    text-align:center;
+}
+
+
+#progressBar{
+    width: 20rem;
+    height: 2rem;
+    border: 0.3rem solid #ff8383;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    margin-top:1.5rem;
+  
+}
+
+#progressBarFull{
+    height: 3.5rem;
+    background-color: #ffffff;
+    width: 0%;
+}
