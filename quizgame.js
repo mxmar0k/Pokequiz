@@ -9,6 +9,7 @@ console.log(choices);
 const progressMetric=document.getElementById("progressMetric");
 const scoreText=document.getElementById("score");
 const filledBar=document.getElementById("filledBar");
+const timerDisplay=document.getElementById("timerDisplay");
 
 //this are the beginning variables at the start of the game 
 
@@ -69,11 +70,43 @@ let questions = [
 
 ]
 
-
+// Timer function
+const startTimer = (duration) => {
+    let timer = duration;
+    timerInterval = setInterval(() => {
+      const seconds = timer % 60;
+      const displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+      timer--;
+      timerDisplay.innerText = `${displaySeconds}s`;
+      if (timer < 0) {
+        clearInterval(timerInterval);
+               blocker();
+      }
+    }, 1000);
+  };
 
 //these are the points you get with every question so you get a 100/100 max and we have max number of questions: 5. 
 const POINTS=20;
 const  NUMBEROFQUESTIONS=5;
+
+const resetTimer = (duration) => {
+    clearInterval(timerInterval); // Clear any existing timer interval
+
+    let timer = duration;
+    timerDisplay.innerText = `Timer: ${timer}s`;
+
+    timerInterval = setInterval(() => {
+        timer--;
+        const seconds = timer % 60;
+        const displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+        timerDisplay.innerText = `Timer: ${displaySeconds}s`;
+        if (timer <= 0) {
+            clearInterval(timerInterval);
+            acceptingAnswers = false;
+            getNewQuestion();
+        }
+    }, 1000);
+};
 
 
 //this is the main function
@@ -82,6 +115,7 @@ startGame=()=>{
     score=0;
     availableQuestions=[...questions]; //this creates a new array called availableQuestions and assigns it the values of the questions array(object). The spread operator (...) is used to create a shallow copy of the questions array
     console.log(availableQuestions) //consolelog is still friend
+    startTimer(10);
     getNewQuestion();
 }
 
@@ -98,6 +132,7 @@ getNewQuestion=()=>{
         localStorage.setItem("mostRecentScore",score);
         return window.location.assign("./results.html");
     };
+    resetTimer(10);
     questionCounter++;
     progressMetric.innerText="Question: "+questionCounter+"/"+NUMBEROFQUESTIONS;
 
@@ -166,17 +201,3 @@ incrementScore=num=>{
 
 
 startGame()
-
-
-
-
-
-
-
-
-
-
-
-
-
-

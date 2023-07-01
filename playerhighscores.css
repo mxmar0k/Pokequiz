@@ -29,7 +29,7 @@
     cursor: pointer;
     transform: translateY(-0.1rem);
     transition: transform 150ms;
-    box-shadow: 0 0 10px 0 #ac2941 inset, 0 0 10px 2px #ac2941;
-    border: 2px solid #ac2941;
+    box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 2px #fff;
+    border: 2px solid #fff;
 
 }
