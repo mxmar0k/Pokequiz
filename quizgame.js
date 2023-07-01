@@ -93,13 +93,13 @@ const resetTimer = (duration) => {
     clearInterval(timerInterval); // Clear any existing timer interval
 
     let timer = duration;
-    timerDisplay.innerText = `Timer: ${timer}s`;
+    timerDisplay.innerText = `${timer}s`;
 
     timerInterval = setInterval(() => {
         timer--;
         const seconds = timer % 60;
         const displaySeconds = seconds < 10 ? "0" + seconds : seconds;
-        timerDisplay.innerText = `Timer: ${displaySeconds}s`;
+        timerDisplay.innerText = `${displaySeconds}s`;
         if (timer <= 0) {
             clearInterval(timerInterval);
             acceptingAnswers = false;
